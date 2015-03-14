@@ -95,12 +95,22 @@ module Mobu
       if mobile_request?
         prepend_view_path mobile_views_path
       elsif tablet_request?
-        prepend_view_path tablet_views_path
+        # detect if tablet views directory exists otherwise use mobile views directory
+        if directory_exists? tablet_views_path
+          prepend_view_path tablet_views_path
+        else
+          prepend_view_path mobile_views_path
+        end
+
       end
     end
 
     def user_agent_matches(regex)
       !!( request.user_agent.to_s.downcase =~ /(#{regex})/ )
+    end
+
+    def directory_exists?(directory)
+      File.directory?(directory)
     end
 
   end

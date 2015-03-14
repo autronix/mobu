@@ -6,11 +6,11 @@ require 'mobu/version'
 Gem::Specification.new do |spec|
   spec.name          = "mobu"
   spec.version       = Mobu::VERSION
-  spec.authors       = ["Tee Parham"]
-  spec.email         = ["tee@neighborland.com"]
+  spec.authors       = ["Tee Parham","Jamil Ben Alluch"]
+  spec.email         = ["tee@neighborland.com", "info@autronix.com"]
   spec.description   = %q{Rails User Agent Dependent View Paths}
   spec.summary       = %q{Rails server-side User Agent detection, plus view path modifications.}
-  spec.homepage      = "https://github.com/neighborland/mobu"
+  spec.homepage      = "https://github.com/autronix/mobu"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.executables   = []
 
-  spec.required_ruby_version = ">= 1.9.3"
+  spec.required_ruby_version = ">= 2.1.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake", "~> 10.1"
