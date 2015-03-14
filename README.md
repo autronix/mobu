@@ -1,9 +1,7 @@
 # Mobu
+Version 1.0.0
 
-[![Gem Version](http://img.shields.io/gem/v/mobu.svg)](http://rubygems.org/gems/mobu)
-[![Build Status](http://img.shields.io/travis/neighborland/mobu.svg)](https://travis-ci.org/neighborland/mobu)
-[![Code Climate](http://img.shields.io/codeclimate/github/neighborland/mobu.svg)](https://codeclimate.com/github/neighborland/mobu)
-[![Coverage Status](http://img.shields.io/coveralls/neighborland/mobu.svg)](https://coveralls.io/r/neighborland/mobu)
+Fork of [Mobu](https://github.com/neighborland/mobu) by Tee Parham
 
 Mobu provides a Rails controller concern called `DetectMobile`.
 Mobu does server-side User Agent detection to categorize requests as mobile, tablet, or default.
@@ -21,7 +19,7 @@ https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent
 Add this line to your Gemfile:
 
 ```ruby
-gem 'mobu'
+gem 'mobu',:git => 'https://github.com/autronix/mobu.git'
 ```
 
 Include the module in your ApplicationController:
@@ -31,13 +29,13 @@ class ApplicationController
   include Mobu::DetectMobile
 ```
 
-Create directories for `views_mobile` and `views_tablet`:
+Create directories for `views_mobile` and `views_tablet` (optional):
 
 ```sh
-mkdir app/views_mobile
-mkdir app/views_tablet
+$ mkdir app/views_mobile
+$ mkdir app/views_tablet
 ```
-This version allows to have only the views_mobile path. If views_table is not present, it will fall back to views_mobile.
+This version allows to have only the 'views_mobile' path. If 'views_tablet' is not present, it will fall back to 'views_mobile' and use the default mobile layout.
 
 ## Usage
 
@@ -73,7 +71,7 @@ To allow full site users to switch to the mobile view, add a link to a default v
 
 ## Credits
 
-Original code by @
+Original code @
 [GitHub by Tee Parham](https://github.com/neighborland/mobu).
 
 The view path modification technique was taken from 
