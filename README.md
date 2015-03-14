@@ -37,6 +37,7 @@ Create directories for `views_mobile` and `views_tablet`:
 mkdir app/views_mobile
 mkdir app/views_tablet
 ```
+This version allows to have only the views_mobile path. If views_table is not present, it will fall back to views_mobile.
 
 ## Usage
 
@@ -71,6 +72,9 @@ To allow full site users to switch to the mobile view, add a link to a default v
 ```
 
 ## Credits
+
+Original code by @
+[GitHub by Tee Parham](https://github.com/neighborland/mobu).
 
 The view path modification technique was taken from 
 [this post by Scott W. Bradley](http://scottwb.com/blog/2012/02/23/a-better-way-to-add-mobile-pages-to-a-rails-site/).
